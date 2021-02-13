@@ -38,3 +38,18 @@ function writeToFile(list, data) {
     );
 }
 
+// TODO: Create a function to initialize app
+function init() {
+    inquirer
+        .prompt(list).then(function(data){
+            let fileRead = generateMarkdown(data);
+            fs.writeFile("team.html",fileRead, function(err){
+                if(err){
+                    return console.log("error")
+                }else console.log('Success!')
+            })
+            
+        })
+}
+// Function call to initialize app
+init();
