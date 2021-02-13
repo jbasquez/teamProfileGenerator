@@ -2,6 +2,7 @@
 const fs = require("fs");
 const inquirer = require("inquirer");
 
+//area of questions for managers input
 const list = [
     {
         type:'input',
@@ -30,3 +31,10 @@ const list = [
     },
 
 ]
+//function to write file
+function writeToFile(list, data) {
+    fs.writeFile(filename, JSON.stringify(data), (err) =>
+      err ? console.log(err) : console.log('Success!')
+    );
+}
+
