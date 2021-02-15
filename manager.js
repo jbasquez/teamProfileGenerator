@@ -1,10 +1,11 @@
 const { getgroups } = require("process");
 
 class Manager {
-    constructor(name, id, email) {
+    constructor(name, id, email, officenum) {
       this.name = name;
       this.id = id;
       this.emaiil = email;
+      this.officenum= officenum;
     }
         getRole() {
         return (this)
@@ -17,6 +18,9 @@ class Manager {
         }
         getEmail() {
             return this.email;
+        }
+        officeNumber() {
+            return this.officenum;
         }
     }
     module.exports = {
