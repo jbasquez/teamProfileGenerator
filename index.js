@@ -45,15 +45,15 @@ const server = http.createServer((req, res) => {
 
     switch(path) {
         case '/Employee':
-            renderPage(res, 'employee.js')
+            renderPage(res, 'employee')
     }
     switch(path) {
         case '/Inern':
-            renderPage(res, 'intern.js')
+            renderPage(res, 'intern')
     }
     switch(path) {
         case '/Manager':
-            renderPage(res, 'manager.js')
+            renderPage(res, 'manager')
     }
 
 });
