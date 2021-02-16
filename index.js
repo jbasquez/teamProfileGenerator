@@ -1,6 +1,7 @@
 // packges needed
 const fs = require("fs");
 const inquirer = require("inquirer");
+const PORT =3007;
 
 //area of questions for managers input
 const list = [
@@ -32,12 +33,12 @@ const list = [
 
 ]
 //function to write file
-function writeToFile(list, data) {
-    fs.writeFile(filename, JSON.stringify(data), (err) =>
-      err ? console.log(err) : console.log('Success!')
-    );
+function renderPage(res, name) {
+    fs.readFile(`${_dirname}${name}.html`, (err, content) => {
+    res.writeHead(200,{'Content-Type': 'text/html'});
+    res.end(content);
+    })
 }
-
 // TODO: Create a function to initialize app
 function init() {
     inquirer
