@@ -39,18 +39,21 @@ function renderPage(res, name) {
     res.end(content);
     })
 }
-// TODO: Create a function to initialize app
-function init() {
-    inquirer
-        .prompt(list).then(function(data){
-            let fileRead = generateMarkdown(data);
-            fs.writeFile("team.html",fileRead, function(err){
-                if(err){
-                    return console.log("error")
-                }else console.log('Success!')
-            })
-            
-        })
-}
-// Function call to initialize app
-init();
+
+const server = http.createServer((req, res) => {
+    const path = req.url;
+
+    switch(path) {
+        case '/Employee':
+            renderPage(res, 'employee.js')
+    }
+    switch(path) {
+        case '/Inern':
+            renderPage(res, 'intern.js')
+    }
+    switch(path) {
+        case '/Manager':
+            renderPage(res, 'manager.js')
+    }
+
+});
