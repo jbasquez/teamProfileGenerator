@@ -4,7 +4,7 @@ class Manager {
     constructor(name, id, email, officenum) {
       this.name = name;
       this.id = id;
-      this.emaiil = email;
+      this.email = email;
       this.officenum= officenum;
     }
         getRole() {
