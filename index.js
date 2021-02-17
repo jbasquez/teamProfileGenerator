@@ -38,7 +38,13 @@ const managerQuestion =[
     }
 ]
 
-// const engineerQuestion
+const engineerQuestion =[
+    {
+        type:'input',
+        message: 'What school did you go to?',
+        name:'school'
+    }
+]
 
 // const interQuestions
 
