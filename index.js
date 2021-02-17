@@ -69,9 +69,14 @@ function companyPrompt(){
                         console.log(engineerData)
                     })
             }
-            
-        });
-
+            else(data.role==="intern"){
+                inquirer
+                    .prompt(managerQuestion).then(function(managerData){
+                        console.log(managerData)
+                    })
+            } 
+        })
+    }
 function addAnother(){
     //this will be another inquier function for the user to add more functions
 }
@@ -89,40 +94,4 @@ function createNewEngineer(){
     
 }
 
-
-
 companyPrompt();
-
-
-
-
-
-
-
-
-
-//function to write file
-// function renderPage(res, name) {
-//     fs.readFile(`${_dirname}${name}.html`, (err, content) => {
-//     res.writeHead(200,{'Content-Type': 'text/html'});
-//     res.end(content);
-//     })
-// }
-
-// const server = http.createServer((req, res) => {
-//     const path = req.url;
-
-//     switch(path) {
-//         case '/Employee':
-//             renderPage(res, 'employee')
-//     }
-//     switch(path) {
-//         case '/Inern':
-//             renderPage(res, 'intern')
-//     }
-//     switch(path) {
-//         case '/Manager':
-//             renderPage(res, 'manager')
-//     }
-
-// });
