@@ -63,7 +63,14 @@ function companyPrompt(){
                         console.log(managerData)
                     })
             }
-            //continue conidtional statemnt for two list options
+            else if(data.role(coreQuestion).then(function(data){
+                if(data.role==="engineer"){
+                    inquirer
+                        .prompt(engineerQuestion).then(function(data){
+                            console.log(engineerData)
+                        })
+                }
+            }))
         })
 
 };
