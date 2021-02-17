@@ -60,21 +60,22 @@ function companyPrompt(){
             if(data.role==="manager"){
                 inquirer
                     .prompt(managerQuestion).then(function(managerData){
-                        console.log(managerData)
+                        console.log(managerData);
                     })
             }
-            else if(data.role==="engineer"){
+            else if(data.role==="intern"){
                 inquirer
-                    .prompt(engineerQuestion).then(function(engineerData){
-                        console.log(engineerData)
-                    })
+                    .prompt(internQuestion).then(function(internData){
+                        console.log(internData);
+                })
             }
-            else(data.role==="intern"){
+            else{
                 inquirer
-                    .prompt(managerQuestion).then(function(managerData){
-                        console.log(managerData)
-                    })
-            } 
+                    .prompt(employeeQuestion).then(function(employeeData){
+                        console.log(employeeData);
+                })
+            }
+
         })
     }
 function addAnother(){
