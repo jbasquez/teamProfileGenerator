@@ -63,17 +63,14 @@ function companyPrompt(){
                         console.log(managerData)
                     })
             }
-            else if(data.role(coreQuestion).then(function(data){
-                if(data.role==="engineer"){
-                    inquirer
-                        .prompt(engineerQuestion).then(function(data){
-                            console.log(engineerData)
-                        })
-                }
-            }))
-        })
-
-};
+            else if(data.role==="engineer"){
+                inquirer
+                    .prompt(engineerQuestion).then(function(engineerData){
+                        console.log(engineerData)
+                    })
+            }
+            
+        });
 
 function addAnother(){
     //this will be another inquier function for the user to add more functions
