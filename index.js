@@ -46,7 +46,11 @@ const engineerQuestion =[
     }
 ]
 
-// const interQuestions
+const interQuestions = [
+    {   type:'input',
+        message: 'What is your github username',
+        name:'github'}
+]
 
 function companyPrompt(){
     console.log("Please fill out teams info:");
