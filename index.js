@@ -71,8 +71,8 @@ function companyPrompt(){
             }
             else{
                 inquirer
-                    .prompt(employeeQuestion).then(function(employeeData){
-                        console.log(employeeData);
+                    .prompt(engineerQuestion).then(function(engineerData){
+                        console.log(engineerData);
                 })
             }
 
@@ -87,11 +87,11 @@ function createNewManager(data, managerData){
 }
 
 
-function createNewIntern(){
+function createNewIntern(data, internData){
     
 }
 
-function createNewEngineer(){
+function createNewEngineer(data, internData){
     
 }
 
