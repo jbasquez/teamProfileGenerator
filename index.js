@@ -46,7 +46,7 @@ const engineerQuestion =[
     }
 ]
 
-const interQuestions = [
+const interQuestion = [
     {   type:'input',
         message: 'What is your github username',
         name:'github'}
