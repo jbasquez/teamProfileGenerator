@@ -1,10 +1,11 @@
 const { getgroups } = require("process");
 
 class Engineer {
-    constructor(name, id, email) {
+    constructor(name, id, email, github) {
       this.name = name;
       this.id = id;
-      this.emaiil = email;
+      this.email = email;
+      this.github = github;
     }
     getRole() {
       return (this)
@@ -17,6 +18,9 @@ class Engineer {
   }
   getEmail() {
     return this.email;
+  }
+  getGithub() {
+    return this.github;
   }
   }
   module.exports = Engineer;

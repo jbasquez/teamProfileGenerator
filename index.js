@@ -79,7 +79,7 @@ function companyPrompt(){
                 inquirer
                     .prompt(engineerQuestion).then(function(engineerData){
                         console.log(engineerData);
-                        
+
                 })
             }
 
@@ -102,7 +102,7 @@ function createNewIntern(name, id, email, school){
     productionTeam.push(newIntern);
 }
 
-function createNewEngineer(data, engineerData){
+function createNewEngineer(name, id, email,){
     
 }
 
