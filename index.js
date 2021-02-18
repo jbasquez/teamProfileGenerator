@@ -79,7 +79,7 @@ function companyPrompt(){
                 inquirer
                     .prompt(engineerQuestion).then(function(engineerData){
                         console.log(engineerData);
-
+                        createNewEngineer(data.name, data.id, data.email, engineerData.github)
                 })
             }
 
@@ -100,10 +100,13 @@ function createNewManager(name, id, email, officenum){
 function createNewIntern(name, id, email, school){
     let newIntern = new Intern(name, id, email, school);
     productionTeam.push(newIntern);
+    console.log(newIntern);
 }
 
-function createNewEngineer(name, id, email,){
-    
+function createNewEngineer(name, id, email, github){
+    let newEngineer = new Engineer(name, id, email, github);
+    productionTeam.push(newEngineer);
+    console.log(newEngineer);
 }
 
 companyPrompt();
