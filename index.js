@@ -56,6 +56,15 @@ const internQuestion = [
         name:'github'}
 ]
 
+const done =[
+    {
+        type:'list',
+        message: 'would you like to add another?',
+        name:'done',
+        choices:["yes", "no"]
+    }
+]
+
 function companyPrompt(){
     console.log("Please fill out teams info:");
     inquirer
@@ -66,6 +75,7 @@ function companyPrompt(){
                     .prompt(managerQuestion).then(function(managerData){
                         console.log(managerData);
                         createNewManager(data.name, data.id, data.email, managerData.officeNum);
+                        inquirer.prompt(done).then(addAnother);
                     })
             }
             else if(data.role==="intern"){
@@ -73,20 +83,26 @@ function companyPrompt(){
                     .prompt(internQuestion).then(function(internData){
                         console.log(internData);
                         createNewIntern(data.name, data.id, data.email, internData.school);
+                        inquirer.prompt(done).then(addAnother);
                 })
             }
             else{
                 inquirer
                     .prompt(engineerQuestion).then(function(engineerData){
                         console.log(engineerData);
-                        createNewEngineer(data.name, data.id, data.email, engineerData.github)
+                        createNewEngineer(data.name, data.id, data.email, engineerData.github);
+                        inquirer.prompt(done).then(addAnother);
                 })
             }
 
         })
     }
 function addAnother(){
-    //this will be another inquier function for the user to add more functions
+    if(done==="yes"){
+        companyPrompt();
+    }else{
+        console.log(productionTeam)
+    }
 }
 
 function createNewManager(name, id, email, officenum){
@@ -110,3 +126,29 @@ function createNewEngineer(name, id, email, github){
 }
 
 companyPrompt();
+
+
+const htmlTop = `
+   <html>
+   <head>
+   <title>Managers Contact Card</title>
+   </head>
+   <body>`
+const htmlEnd = `
+</body>
+   </html>`
+for(var i=0; i<productionTeam.length, i++){
+    var card = `
+    <h4>Name: </h4>
+    <h5> ${this.name}</h5>
+    <h4>Id: </h4>
+    <h5> ${this.id}</h5>
+    <h4>Email: </h4>
+    <h5> ${this.email}</h5>
+    <h4>Office Number: </h4>
+    <h5> ${this.officenum}</h5>
+    <h4>Role</h4>
+    <h5>${this}</h5>`
+    htmlTop = htmlTop + card
+};
+htmlTop = htmlTop + htmlEnd
