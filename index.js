@@ -101,7 +101,7 @@ function companyPrompt(){
 function addAnother(){
     console.log(done.choices);
     if(done.choices==="yes"){
-        companyPrompt();
+        inquuirer.prompt(companyPrompt);
     }else{
         console.log(productionTeam)
     }
