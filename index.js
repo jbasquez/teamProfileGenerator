@@ -72,12 +72,14 @@ function companyPrompt(){
                 inquirer
                     .prompt(internQuestion).then(function(internData){
                         console.log(internData);
+                        createNewIntern(data.name, data.id, data.email, internData.school);
                 })
             }
             else{
                 inquirer
                     .prompt(engineerQuestion).then(function(engineerData){
                         console.log(engineerData);
+                        
                 })
             }
 
@@ -95,8 +97,9 @@ function createNewManager(name, id, email, officenum){
 }
 
  
-function createNewIntern(data, internData){
-    
+function createNewIntern(name, id, email, school){
+    let newIntern = new Intern(name, id, email, school);
+    productionTeam.push(newIntern);
 }
 
 function createNewEngineer(data, engineerData){
