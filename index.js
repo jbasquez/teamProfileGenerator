@@ -1,9 +1,9 @@
 // packges needed
 const fs = require("fs");
 const inquirer = require("inquirer");
-const Engineer = require("../teamProfileGenerator/engineer");
-const Intern = require("../teamProfileGenerator/intern");
-const Manager = require("../teamProfileGenerator/manager");
+const Engineer = require("./engineer");
+const Intern = require("./intern");
+const Manager = require("./manager");
 
 // const PORT =3007;
 
