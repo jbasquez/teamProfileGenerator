@@ -1,6 +1,10 @@
 // packges needed
 const fs = require("fs");
 const inquirer = require("inquirer");
+const Engineer = require("../teamProfileGenerator/engineer");
+const Intern = require("../teamProfileGenerator/intern");
+const Manager = require("../teamProfileGenerator/manager");
+
 // const PORT =3007;
 
 //area of questions for managers input
@@ -61,6 +65,7 @@ function companyPrompt(){
                 inquirer
                     .prompt(managerQuestion).then(function(managerData){
                         console.log(managerData);
+                        createNewManager();
                     })
             }
             else if(data.role==="intern"){
@@ -82,11 +87,14 @@ function addAnother(){
     //this will be another inquier function for the user to add more functions
 }
 
-function createNewManager(data, managerData){
+function createNewManager(name, id, email, officenum){
     // figure out how to create new manager object to push into prodcution team array
+    const addManager = new  Manager(name, id, email, officenum);
+    addManager.push(productionTeam);
+    console.log(addManager)
 }
 
-
+ 
 function createNewIntern(data, internData){
     
 }
