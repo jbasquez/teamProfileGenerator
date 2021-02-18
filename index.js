@@ -38,7 +38,7 @@ const managerQuestion =[
     {
         type:'input',
         message: 'What is your office number?',
-        name:'oficeNum'
+        name:'officeNum'
     }
 ]
 
@@ -65,7 +65,7 @@ function companyPrompt(){
                 inquirer
                     .prompt(managerQuestion).then(function(managerData){
                         console.log(managerData);
-                        createNewManager();
+                        createNewManager(data.name, data.id, data.email, managerData.officeNum);
                     })
             }
             else if(data.role==="intern"){
