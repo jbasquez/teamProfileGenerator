@@ -97,8 +97,10 @@ function companyPrompt(){
 
         })
     }
+
 function addAnother(){
-    if(done==="yes"){
+    console.log(done.choices);
+    if(done.choices==="yes"){
         companyPrompt();
     }else{
         console.log(productionTeam)
@@ -128,27 +130,27 @@ function createNewEngineer(name, id, email, github){
 companyPrompt();
 
 
-const htmlTop = `
-   <html>
-   <head>
-   <title>Managers Contact Card</title>
-   </head>
-   <body>`
-const htmlEnd = `
-</body>
-   </html>`
-for(var i=0; i<productionTeam.length, i++){
-    var card = `
-    <h4>Name: </h4>
-    <h5> ${this.name}</h5>
-    <h4>Id: </h4>
-    <h5> ${this.id}</h5>
-    <h4>Email: </h4>
-    <h5> ${this.email}</h5>
-    <h4>Office Number: </h4>
-    <h5> ${this.officenum}</h5>
-    <h4>Role</h4>
-    <h5>${this}</h5>`
-    htmlTop = htmlTop + card
-};
-htmlTop = htmlTop + htmlEnd
+// const htmlTop = `
+//    <html>
+//    <head>
+//    <title>Managers Contact Card</title>
+//    </head>
+//    <body>`
+// const htmlEnd = `
+// </body>
+//    </html>`
+// for(var i=0; i<productionTeam.length, i++){
+//     var card = `
+//     <h4>Name: </h4>
+//     <h5> ${this.name}</h5>
+//     <h4>Id: </h4>
+//     <h5> ${this.id}</h5>
+//     <h4>Email: </h4>
+//     <h5> ${this.email}</h5>
+//     <h4>Office Number: </h4>
+//     <h5> ${this.officenum}</h5>
+//     <h4>Role</h4>
+//     <h5>${this}</h5>`
+//     htmlTop = htmlTop + card
+// };
+// htmlTop = htmlTop + htmlEnd
