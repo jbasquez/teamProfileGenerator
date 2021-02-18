@@ -46,7 +46,7 @@ const engineerQuestion =[
     }
 ]
 
-const interQuestion = [
+const internQuestion = [
     {   type:'input',
         message: 'What is your github username',
         name:'github'}
@@ -91,7 +91,7 @@ function createNewIntern(data, internData){
     
 }
 
-function createNewEngineer(data, internData){
+function createNewEngineer(data, engineerData){
     
 }
 

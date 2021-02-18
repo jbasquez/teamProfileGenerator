@@ -1,6 +1,6 @@
 const { getgroups } = require("process");
 
-class Employee {
+class Engineer {
     constructor(name, id, email) {
       this.name = name;
       this.id = id;
@@ -20,5 +20,5 @@ class Employee {
   }
   }
   module.exports = {
-    Employee
+    Engineer
   };
