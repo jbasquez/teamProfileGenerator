@@ -90,8 +90,8 @@ function addAnother(){
 function createNewManager(name, id, email, officenum){
     // figure out how to create new manager object to push into prodcution team array
     const addManager = new  Manager(name, id, email, officenum);
-    addManager.push(productionTeam);
-    console.log(addManager)
+    productionTeam.push(Manager);
+    console.log(Manager)
 }
 
  

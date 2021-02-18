@@ -8,7 +8,7 @@ class Manager {
       this.officenum= officenum;
     }
         getRole() {
-        return (this)
+        return ("manager")
         }
         getName() {
             return this.name;
@@ -23,6 +23,5 @@ class Manager {
             return this.officenum;
         }
     }
-    module.exports = {
-        Manager
-    };
+    module.exports = 
+        Manager;

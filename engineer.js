@@ -19,6 +19,4 @@ class Engineer {
     return this.email;
   }
   }
-  module.exports = {
-    Engineer
-  };
+  module.exports = Engineer;
