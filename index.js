@@ -99,16 +99,14 @@ function companyPrompt(){
     }
 
 function addAnother(){
-    console.log(done.choices);
     if(done.choices==="yes"){
-        inquuirer.prompt(companyPrompt);
+        inquirer.prompt(companyPrompt);
     }else{
         console.log(productionTeam)
     }
 }
 
 function createNewManager(name, id, email, officenum){
-    // figure out how to create new manager object to push into prodcution team array
     let newManager = new  Manager(name, id, email, officenum);
     productionTeam.push(newManager);
     console.log(newManager);
