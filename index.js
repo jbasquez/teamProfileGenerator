@@ -60,7 +60,7 @@ const done =[
     {
         type:'list',
         message: 'would you like to add another?',
-        name:'done',
+        name:'isdone',
         choices:["yes", "no"]
     }
 ]
@@ -100,9 +100,10 @@ function companyPrompt(){
 
 function addAnother(){
     if(done.choices==="yes"){
-        inquirer.prompt(companyPrompt);
+        console.log("test");
+        companyPrompt();
     }else{
-        console.log(productionTeam)
+        console.log("bad test");
     }
 }
 
@@ -134,9 +135,7 @@ companyPrompt();
 //    <title>Managers Contact Card</title>
 //    </head>
 //    <body>`
-// const htmlEnd = `
-// </body>
-//    </html>`
+
 // for(var i=0; i<productionTeam.length, i++){
 //     var card = `
 //     <h4>Name: </h4>
@@ -151,4 +150,7 @@ companyPrompt();
 //     <h5>${this}</h5>`
 //     htmlTop = htmlTop + card
 // };
+// const htmlEnd = `
+// </body>
+//    </html>`
 // htmlTop = htmlTop + htmlEnd
